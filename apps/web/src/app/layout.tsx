@@ -1,3 +1,5 @@
+import './globals.css';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,43 +7,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <style jsx global>{`
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          .animate-fade-in {
-            animation: fade-in 0.5s ease-out forwards;
-          }
-          
-          /* Custom scrollbar for messages */
-          .messages-container::-webkit-scrollbar {
-            width: 6px;
-          }
-          
-          .messages-container::-webkit-scrollbar-track {
-            background: #f1f5f9;
-            border-radius: 3px;
-          }
-          
-          .messages-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-          }
-          
-          .messages-container::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-          }
-        `}</style>
-      </head>
       <body>{children}</body>
     </html>
   );

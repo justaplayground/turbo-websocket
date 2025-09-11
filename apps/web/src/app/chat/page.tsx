@@ -61,10 +61,11 @@ export default function ChatPage() {
           const message: ChatMessage = JSON.parse(event.data);
           
           switch (message.type) {
-            case "user_list":
+            case "user_list": {
               const userList = JSON.parse(message.content);
               setUsers(userList);
               break;
+            }
             case "user_joined":
             case "user_left":
             case "message":
